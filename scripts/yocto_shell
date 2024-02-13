@@ -1,0 +1,7 @@
+#!/bin/bash
+
+source _common_includes
+
+CONTAINER=citadel_yocto:latest
+
+$DOCKER_SHELL_BASE $CONTAINER

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+CONTAINER_USER=user
+WORKSPACE_DIR="/enclaves"
+
+DOCKER_RUN_BASE="docker run -t --init --rm --network host --env DISPLAY -v $HOME/.Xauthority:/home/${CONTAINER_USER}/.Xauthority -v $(pwd):${WORKSPACE_DIR} -w ${WORKSPACE_DIR}"
+DOCKER_SHELL_BASE="docker run --init --rm -it --network host --env DISPLAY -v $HOME/.Xauthority:/home/${CONTAINER_USER}/.Xauthority -v $(pwd):${WORKSPACE_DIR} -w ${WORKSPACE_DIR}"

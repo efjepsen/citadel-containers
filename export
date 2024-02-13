@@ -1,0 +1,5 @@
+#!/bin/bash
+
+SOURCE=`( dirname "${BASH_SOURCE[0]}" )`
+SOURCE=`( cd "$SOURCE" && pwd )`
+export PATH="$SOURCE"/scripts:"$PATH"
